@@ -114,17 +114,17 @@
       const myList = document.getElementById('comment-list');
 
        newDiv1 = document.createElement('div');
-       newDiv1.classeName += 'flex space-x-4 text-sm text-gray-500';
+       newDiv1.className += "flex space-x-4 text-sm text-gray-500";
 
        newDiv2 = document.createElement('div');
-        newDiv2.classeName += 'flex-1 py-10 border-t border-gray-200';
+        newDiv2.className += "flex-1 py-10 border-t border-gray-200";
 
        h3 = document.createElement('h3');
-      h3.classeName += 'font-medium .text-gray-900';
+      h3.className += "font-medium text-gray-900";
       h3.innerHTML += firstName.value + '  '+ lastName.value;
 
        newDiv3 = document.createElement('div');
-       newDiv3.classeName += 'prose prose-sm mt-4 max-w-none text-gray-500';
+       newDiv3.className += "prose prose-sm mt-4 max-w-none text-gray-500";
 
        para = document.createElement('p');
       para.innerHTML += message.value;
@@ -132,17 +132,17 @@
 
 
 
-      //newDiv3.appendChild(para)
-      newDiv2.appendChild(h3);
-      newDiv1.appendChild(newDiv2);
-      myList.appendChild(newDiv1);
-      myList.appendChild(newDiv3);
-      myList.appendChild(para);
-
+    newDiv3.appendChild(para);
+    newDiv2.appendChild(h3);
+    newDiv2.appendChild(newDiv3);
+    newDiv1.appendChild(newDiv2);
+    myList.appendChild(newDiv1);
       
+
+      form.reset();
     
      }
-     form.reset();
+     
 
      
   })
